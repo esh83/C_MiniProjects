@@ -1,5 +1,5 @@
-/* TIC TAC TOE GAME DEVELOPED BY EHSAN SHAFIEE
-GITHUB REPO : https://github.com/esh83/HangMan_C */
+/* HANGMAN GAME DEVELOPED BY EHSAN SHAFIEE
+GITHUB REPO : https://github.com/esh83/C_MiniProjects/tree/main/hangman */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -19,6 +19,10 @@ int main()
 {
     srand(time(NULL));
     FILE *words_file = fopen("words.txt", "r");
+    if(words == NULL){
+        printf("first add words.txt file !");
+        exit(1);
+    }
     char current_char;
     while ((current_char = fgetc(words_file)) != EOF)
     {
